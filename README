@@ -1,0 +1,33 @@
+Student: Fatu Miruna-Maria
+
+HyperLogLog
+
+Explicatii functii:
+	MCreate:
+	
+	- se obtine hash-ul din functia de hash
+	- se obtine indexul ca fiind numarul format din primii 11 biti din hash
+	- calculam numarul de biti 0 initiali din restul bitilor, de la 11 la 32 
+	- se actualizeaza in M[index] numarul de biti 0 initiali gasiti
+
+	ZCreate:
+
+	- se calculeaza initial S, pentru toate bucket-urile folosite din M
+	- se obtine Z
+
+	ECreate:
+
+	- se calculeaza m (numarul de bucket-uri folosite) pentru a calcula alfa_m
+	- se obtine E
+
+	main:
+
+	- se deschide fisierul de unde urmeaza sa fie prelucrate datele
+	- este creat vectorul M, iar apoi initializat cu functia MInit
+	- se citesc numerele din fisier, fiind apoi prelucrate fiecare in functia MCreate
+	- se obtine E si se afiseaza
+
+Note: Functiile de hash sunt preluate din laborator.
+ 
+
+
